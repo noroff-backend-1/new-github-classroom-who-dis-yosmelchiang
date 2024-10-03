@@ -6,9 +6,21 @@
     <title>First Classroom Activity</title>
 
     <style>
-      .header {
+    .header {
         color: #111;
       }
+
+    .dark-mode {
+        background-color: #111;  
+    }
+
+    .dark-mode p{
+        color: aliceblue
+    }
+
+    .dark-mode .header{
+        color: aliceblue
+    }
     </style>
   </head>
 
@@ -44,28 +56,38 @@
 
       // 4. Inside the function "changeMode", check if isDark is true or false
 
-      
       // 5. If it's true, change the background color of the body to white, and the foreground color to #111. Change the color of the header to #111. Change the button text to 🌑
       
       // 6. If it's false, change the background color of the body to #111, and the foreground color to aliceblue. Change the color of the header to aliceblue. Change the button text to 🌕
       
       // 7. Finally, change the value of isDark to whatever it wasn't before
-      
+
       function changeMode() {
         if (isDark != true) {
-          isDark = true;
-          $('body').css('backgroundColor', '#111');
-          $('p').css('color', 'aliceblue');
-          $('.header').css('color', 'aliceblue');
-          $('button').text('🌕');
+            isDark = true;
+            $('body').toggleClass('dark-mode')
         } else {
-          isDark = false;
-          $('body').css('backgroundColor', 'white');
-          $('p').css('color', '#111');
-          $('.header').css('color', '#111');
-          $('button').text('🌑');
+            $('body').toggleClass('dark-mode')
         }
       }
+
+    //   function changeMode() {
+    //     if (isDark != true) {
+    //       isDark = true;
+    //       $('body').css('backgroundColor', '#111');
+    //       $('p').css('color', 'aliceblue');
+    //       $('.header').css('color', 'aliceblue');
+    //       $('button').text('🌕');
+    //     } else {
+    //       isDark = false;
+    //       $('body').css('backgroundColor', 'white');
+    //       $('p').css('color', '#111');
+    //       $('.header').css('color', '#111');
+    //       $('button').text('🌑');
+    //     }
+    //   }
+
+
     </script>
   </body>
 </html>
